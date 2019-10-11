@@ -1,17 +1,18 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+
 import { User, fetchUsers } from "./redux/actions";
 import { StoreState } from "./redux/reducers/rootReducer";
 import './App.css';
 
 interface AppProps {
   users: User[];
-  fetchUsers: Function;
+  fetchUsers: () => void;
 }
 
 class _App extends React.Component<AppProps> {
 
-  onButtonClick = (): void => {
+  onButtonClick = () => {
     this.props.fetchUsers();
   }
 

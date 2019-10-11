@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { Dispatch } from 'redux';
 
-import { FETCH_USERS } from '../constants';
 import { ActionTypes } from '../types';
 
 export interface User {
